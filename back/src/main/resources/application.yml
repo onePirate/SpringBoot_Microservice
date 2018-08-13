@@ -1,0 +1,23 @@
+db:
+  ip: 127.0.0.1
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+  thymeleaf:
+    cache: false
+    prefix: classpath:/template/
+    suffix: html
+    encoding: UTF-8
+  jpa:
+    database: MySQL
+    show-sql: true
+
+mybatis:
+  #实体类所做包
+  type-aliases-package: com.back.entity
+  #mappers.xml所在位置
+  mapper-locations: classpath:mappers/*.xml
+
