@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.back.mybatis.UserDao">
+
+    <sql id="Base_Column_List" >
+        t_id id, t_name name, t_age age, t_address address
+    </sql>
+
+    <select id="findUser" resultType="com.back.entity.UserBo">
+        SELECT 
+        <include refid="Base_Column_List" />
+        FROM t_user
+        <where>
+            <if test="id != null and id != ''">
+                and t_id = #{id}
+            </if>
+        </where>
+    </select>
+
+    <insert id="save">
+        INSERT INTO t_user (t_name,t_age,t_address)
+        VALUES(#{name}, #{age}, #{address})
+    </insert>
+
+    <update id="update">
+        UPDATE t_user SET
+            t_name = #{name},
+            t_age = #{age},
+            t_address = #{address}
+        WHERE
+            t_id = #{id}
+    </update>
+
+    <update id="delete">
+        DELETE FROM t_user WHERE t_id = #{id}
+    </update>
+</mapper>
