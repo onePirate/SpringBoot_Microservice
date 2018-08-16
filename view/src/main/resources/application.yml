@@ -15,3 +15,18 @@ spring:
     database: MySQL
     show-sql: true
 
+constant:
+  LastName: dw
+  age: 24
+  boss: false
+  birth-day: 1994/12/09
+  map: {k1: v1,k2: v2}
+  lists:
+    - list
+    - zhaoliu
+  address:
+    province: SiChuan
+    city: Chengdu
+    district: ShuangLiu
+    area: NanHuGongYuan
+

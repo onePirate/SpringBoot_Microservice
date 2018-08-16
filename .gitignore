@@ -2,3 +2,13 @@
 .idea/.name
 *.xml
 *.iml
+*.class
+view/target/classes/application-dev.yml
+view/target/classes/application-prod.yml
+view/target/classes/application.yml
+view/target/classes/sql/t_logger_infos.sql
+view/target/classes/sql/t_user.sql
+view/target/classes/static/css
+view/target/classes/templates/index.html
+view/target/classes/META-INF/spring-configuration-metadata.json
+.idea/workspace.xml___jb_tmp___
