@@ -1,0 +1,7 @@
+server:
+  port: 8888
+
+spark:
+  spark-home: .
+  app-name: sparkTestSpark
+  master: local[4]
