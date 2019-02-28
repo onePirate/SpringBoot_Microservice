@@ -8,3 +8,4 @@
 2. back项目Controller层采用自定义类REST接口方式返回数据；
 3. view项目采用jpa对ORM框架，用于总结jpa的操作；
 4. back项目采用Mybatis的ORM框架，用于总结Mybatis的操作；
+5. spark项目是测试使用，不用管，clone之后可以删除。
