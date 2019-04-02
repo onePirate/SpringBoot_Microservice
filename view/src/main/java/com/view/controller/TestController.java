@@ -1,18 +1,13 @@
 package com.view.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.view.constant.PropertiesConstant;
-import com.view.entity.jpa.UserBo;
-import com.view.service.IUserService;
-import com.view.tools.LoggerTool;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpServletRequest;
-import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
@@ -28,6 +23,7 @@ public class TestController {
     @GetMapping("userConstant")
     public ResponseEntity<PropertiesConstant> getAllUser(){
         try{
+            log.info(">>>>>idea create temp branch handle bug");
             return ResponseEntity.ok(userConstant);
         }catch(Exception ex){
             log.error(">>>>>getAllUser user has errors:",ex);
