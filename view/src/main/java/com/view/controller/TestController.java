@@ -23,7 +23,7 @@ public class TestController {
     @GetMapping("userConstant")
     public ResponseEntity<PropertiesConstant> getAllUser(){
         try{
-            log.info(">>>>>idea create temp branch handle bug");
+            log.info(">>>>>idea create temp branch handle bug,dev branch add log test merge");
             return ResponseEntity.ok(userConstant);
         }catch(Exception ex){
             log.error(">>>>>getAllUser user has errors:",ex);
