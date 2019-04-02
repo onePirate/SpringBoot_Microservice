@@ -25,6 +25,7 @@ public class TestController {
         try{
             log.info(">>>>>idea create temp branch handle bug,true dev branch add log test merge");
             log.info(">>>>>idea create temp branch handle bug,dev develop 1");
+            log.info(">>>>>idea create temp branch handle bug,dev develop 2");
             return ResponseEntity.ok(userConstant);
         }catch(Exception ex){
             log.error(">>>>>getAllUser user has errors:",ex);
