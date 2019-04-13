@@ -5,7 +5,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
- * @Author: gwx556610
+ * @Author: gaodw
  * @Date: 10:11 2018/8/9
  * @Desc: 添加跨域访问方式
  */

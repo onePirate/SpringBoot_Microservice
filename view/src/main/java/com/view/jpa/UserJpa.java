@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import java.io.Serializable;
 
 /**
- * @Author: gwx556610
+ * @Author: gaodw
  * @Date: 17:01 2018/8/6
  * @Desc: 用户操作的jpa
  */

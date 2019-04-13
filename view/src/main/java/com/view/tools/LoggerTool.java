@@ -3,7 +3,7 @@ package com.view.tools;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @Author: gwx556610
+ * @Author: gaodw
  * @Date: 16:21 2018/8/8
  * @Desc: 日志处理工具类
  */

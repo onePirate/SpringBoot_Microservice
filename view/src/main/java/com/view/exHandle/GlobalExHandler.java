@@ -5,7 +5,7 @@ import com.common.tools.ResultTool;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @Author: gwx556610
+ * @Author: gaodw
  * @Date: 17:29 2018/8/8
  * @Desc: 全局异常处理
  */

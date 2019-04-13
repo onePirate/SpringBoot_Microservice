@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @Author: gwx556610
+ * @Author: gaodw
  * @Date: 14:29 2018/8/8
  * @Desc: Druid添加监控
  */

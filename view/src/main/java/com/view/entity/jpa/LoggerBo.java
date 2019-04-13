@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
 /**
- * @Author: gwx556610
+ * @Author: gaodw
  * @Date: 16:19 2018/8/8
  * @Desc:
  */

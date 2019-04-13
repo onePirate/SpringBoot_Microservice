@@ -3,7 +3,7 @@ package com.view;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 /**
- * @Author: gwx556610
+ * @Author: gaodw
  * @Date: 13:48 2018/8/8
  * @Desc: 初始化
  */
