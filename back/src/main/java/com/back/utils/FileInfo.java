@@ -1,6 +1,7 @@
 package com.back.utils;
 
 import it.sauronsoftware.jave.Encoder;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -16,19 +17,39 @@ import java.util.List;
  * @createTime 2019-04-13 13:11
  * @description
  */
+@Slf4j
 public class FileInfo {
 
-
-    private static String strPath = "I:\\01.编程学习\\《特殊资料01》尚硅谷JavaWeb系统学习\\第 4 阶段\\24.尚硅谷Jenkins视频教程";
+    private static String strPath = "I:\\编程学习\\05.编程栈复杂学习\\龙果学院\\深入理解Java虚拟机（jvm性能调优+内存模型+虚拟机原理）";
     private static String suffix = "avi";
 
     public static void main(String[] args) {
+        getFileTime();
+//        renameFile();
+    }
+
+    public static void renameFile(){
+        List<String> list = FileInfo.getFileList(strPath, suffix);
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i).substring(49));
+            String newName = "";
+            if (i <9) {
+                newName = "0"+(i+1)+"_"+list.get(i).substring(61);
+            }else{
+                newName = (i+1)+"_"+list.get(i).substring(61);
+            }
+            System.out.println(newName.split("\\\\")[0]+".avi");
+            System.out.println(renameFile(strPath,list.get(i).substring(49),newName.split("\\\\")[0]+".avi"));
+        }
+    }
+
+    public static void getFileTime(){
         List<String> list = FileInfo.getFileList(strPath, suffix);
         long timeSum = 0;
         for (int i = 0; i < list.size(); i++) {
             //特殊需求改造
 //            timeSum = getTimeSum(list, timeSum, i);
-            timeSum += getVideoTime(list.get(i));
+            timeSum += FileInfo.getVideoTime(list.get(i));
         }
         System.out.println("===================总共的时间为：" + Double.valueOf(timeSum) / 1000 / 60 / 60);
     }
@@ -42,6 +63,33 @@ public class FileInfo {
         return timeSum;
     }
 
+    /** 文件重命名
+     * @param path 文件路径
+     * @param oldname 原有的文件名
+     * @param newname 新的文件名
+     */
+    public static boolean renameFile(String path, String oldname, String newname) {
+        // 新的文件名和以前文件名不同时,才有必要进行重命名
+        if (!oldname.equals(newname)) {
+            File oldfile = new File(path + "/" + oldname);
+            File newfile = new File(path + "/" + newname);
+            if (!oldfile.exists()) {
+                log.error("需要重命名的文件不存在");
+                return false;// 重命名文件不存在
+            }
+            if (newfile.exists()) {// 若在该目录下已经有一个文件和新文件名相同，则不允许重命名
+                log.error(newname + "已经存在！");
+                return false;
+            } else {
+                boolean isSuccess = oldfile.renameTo(newfile);
+                return isSuccess;
+            }
+        } else {
+            log.error("新文件名和旧文件名相同...");
+        }
+        return false;
+    }
+
 
     /**
      * 获得视频文件的时长
@@ -49,8 +97,8 @@ public class FileInfo {
      * @param strPath
      * @return
      */
+    static List filelist = new ArrayList();
     public static List<String> getFileList(String strPath, String suffix) {
-        List filelist = new ArrayList();
         File dir = new File(strPath);
         File[] files = dir.listFiles(); // 该文件目录下文件全部放入数组
         if (files != null) {
