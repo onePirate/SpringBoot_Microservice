@@ -4,7 +4,7 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/myboot?useUnicode=true&characterEncoding=utf-8&useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     driverClassName: com.mysql.jdbc.Driver
     username: root
-    password:
+    password: 123456
     #配置监控统计拦截的filters，去掉后监控界面sql将无法统计,'wall'用于防火墙
     filters: stat, wall, log4j
     #最大活跃数

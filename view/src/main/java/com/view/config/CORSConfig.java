@@ -9,6 +9,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * @Date: 10:11 2018/8/9
  * @Desc: 添加跨域访问方式
  */
+
+
+
 /**
  * addMapping：配置可以被跨域的路径，可以任意配置，可以具体到直接请求路径。
  * allowedMethods：允许所有的请求方法访问该跨域资源服务器，如：POST、GET、PUT、DELETE等。
