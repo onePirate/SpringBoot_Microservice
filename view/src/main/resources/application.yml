@@ -30,3 +30,6 @@ constant:
     district: ShuangLiu
     area: NanHuGongYuan
 
+rmq:
+  rabbitIp: "%{config.get('rabbitmq.ip')}"
+

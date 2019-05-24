@@ -25,6 +25,3 @@ spring:
     testWhileIdle: true
     testOnBorrow: false
     testOnReturn: false
-
-rmq:
-  rabbitIp: "%{config.get('rabbitmq.ip')}"
