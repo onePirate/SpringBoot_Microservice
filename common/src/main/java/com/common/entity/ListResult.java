@@ -3,7 +3,7 @@ package com.common.entity;
 import lombok.Data;
 
 /**
- * @Author: gwx556610
+ * @Author: gaodw
  * @Date: 17:19 2018/8/8
  * @Desc: 如果是List则返回
  */

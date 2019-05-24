@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import java.util.List;
 
 /**
- * @Author: gwx556610
+ * @Author: gaodw
  * @Date: 15:11 2018/8/8
  * @Desc: 配置返回内容的过滤
  */

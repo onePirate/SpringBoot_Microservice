@@ -5,7 +5,7 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
- * @Author: gwx556610
+ * @Author: gaodw
  * @Date: 16:44 2018/8/8
  * @Desc: 自定义资源文件夹，避免暴露实际资源放置的文件夹给客户
  */

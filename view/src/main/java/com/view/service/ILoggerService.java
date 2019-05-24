@@ -3,7 +3,7 @@ package com.view.service;
 import com.view.entity.jpa.LoggerBo;
 
 /**
- * @Author: gwx556610
+ * @Author: gaodw
  * @Date: 16:27 2018/8/8
  * @Desc:
  */

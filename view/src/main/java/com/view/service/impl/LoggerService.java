@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * @Author: gwx556610
+ * @Author: gaodw
  * @Date: 16:27 2018/8/8
  * @Desc: 日志接口实现类
  */

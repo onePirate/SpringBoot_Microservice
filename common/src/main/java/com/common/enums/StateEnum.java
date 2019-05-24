@@ -1,7 +1,7 @@
 package com.common.enums;
 
 /**
- * @Author: gwx556610
+ * @Author: gaodw
  * @Date: 17:13 2018/8/6
  * @Desc:
  */
