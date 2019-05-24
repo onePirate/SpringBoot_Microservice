@@ -14,6 +14,12 @@ spring:
   jpa:
     database: MySQL
     show-sql: true
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/myboot?useUnicode=true&characterEncoding=utf-8&useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+
 
 mybatis:
   #实体类所做包

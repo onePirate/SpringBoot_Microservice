@@ -1,6 +1,7 @@
 package com.view.controller;
 
 import com.view.constant.PropertiesConstant;
+import com.view.properties.RabbitMQModel;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,6 +34,14 @@ public class TestController {
             log.error(">>>>>getAllUser user has errors:",ex);
         }
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+    }
+
+    @Autowired
+    RabbitMQModel rabbitMQModel;
+
+    @GetMapping("getConfig")
+    public RabbitMQModel getRabbitMQModel(){
+        return rabbitMQModel;
     }
 
 }
