@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.5.RELEASE</version>
+    </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.base</groupId>
-    <artifactId>Base</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>base</artifactId>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <profiles>
@@ -38,37 +44,28 @@
         </profile>
     </profiles>
 
+    <!-- all modules package together -->
+    <modules>
+        <module>common</module>
+        <module>config-mng</module>
+        <module>view</module>
+        <!--<module>back</module>-->
+    </modules>
+
     <properties>
-        <version>1.5.2.RELEASE</version>
+        <springboot.version>2.1.5.RELEASE</springboot.version>
         <devtools.version>1.3.0.RELEASE</devtools.version>
+        <fastjson.version>1.2.31</fastjson.version>
+        <mysql.version>6.0.6</mysql.version>
+        <mybatis.version>3.4.5</mybatis.version>
+        <mybatis.starter.version>1.3.2</mybatis.starter.version>
     </properties>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.2.RELEASE</version>
-        <relativePath/>
-    </parent>
-
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-        </dependency>
         <!-- 日志注解方式 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-        </dependency>
-        <!-- 导入配置文件处理器，配置文件进行绑定就会有提示 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
         </dependency>
     </dependencies>
 
@@ -76,41 +73,33 @@
         <dependencies>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-devtools</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-thymeleaf</artifactId>
-                <version>1.5.2.RELEASE</version>
-            </dependency>
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>6.0.6</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-jpa</artifactId>
-                <version>1.5.2.RELEASE</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-tomcat</artifactId>
+                <artifactId>spring-boot-starter</artifactId>
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
-                <version>1.2.31</version>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <!-- mybatis -->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.26</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
-    <!-- all modules package together -->
-    <modules>
-        <module>common</module>
-        <module>view</module>
-        <module>back</module>
-    </modules>
+
 
     <build>
         <plugins>

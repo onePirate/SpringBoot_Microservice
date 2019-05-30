@@ -1,4 +1,4 @@
-package com.common.config.perporties;
+package com.configmng;
 
 
 import java.lang.reflect.Field;

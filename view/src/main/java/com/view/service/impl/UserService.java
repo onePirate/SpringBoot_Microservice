@@ -27,7 +27,7 @@ public class UserService implements IUserService {
 
     @Override
     public void delUser(Long id) {
-        userJpa.delete(id);
+        userJpa.deleteById(id);
     }
 
 }

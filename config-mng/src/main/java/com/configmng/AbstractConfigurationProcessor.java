@@ -1,4 +1,4 @@
-package com.common.config.perporties;
+package com.configmng;
 
 
 import javax.annotation.PostConstruct;
@@ -20,5 +20,4 @@ public class AbstractConfigurationProcessor {
     public void init() {
         this.configurationListenerProcessor.setCenterValue(this);
     }
-
 }

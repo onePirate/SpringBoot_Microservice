@@ -1,4 +1,4 @@
-package com.common.tools;
+package com.view.tools;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.web.context.support.WebApplicationContextUtils;
@@ -19,7 +19,7 @@ public class SpringFactoryTool {
      * @param <T>
      * @return
      */
-    public static <T> T getBean(Class<T> clazz,HttpServletRequest request)
+    public static <T> T getBean(Class<T> clazz, HttpServletRequest request)
     {
         BeanFactory factory = WebApplicationContextUtils.getRequiredWebApplicationContext(request.getServletContext());
         return factory.getBean(clazz);

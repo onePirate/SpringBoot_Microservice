@@ -3,7 +3,7 @@ package com.view.interceptor;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.common.tools.JSONTool;
-import com.common.tools.SpringFactoryTool;
+import com.view.tools.SpringFactoryTool;
 import com.view.entity.jpa.LoggerBo;
 import com.view.service.ILoggerService;
 import com.view.tools.LoggerTool;
@@ -72,7 +72,8 @@ public class LoggerInterceptor implements HandlerInterceptor {
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object o, Exception e) throws Exception {
         //获取请求错误码
-        int status = response.getStatus();
+//        int status = response.getStatus();
+        int status = 0;
         //当前时间
         long currentTime = System.currentTimeMillis();
         //请求开始时间

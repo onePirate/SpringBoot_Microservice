@@ -1,6 +1,6 @@
 package com.view.properties;
 
-import com.common.config.perporties.AbstractConfigurationProcessor;
+import com.configmng.AbstractConfigurationProcessor;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
