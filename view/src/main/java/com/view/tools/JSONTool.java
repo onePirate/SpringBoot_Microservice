@@ -1,4 +1,4 @@
-package com.common.tools;
+package com.view.tools;
 
 import javax.servlet.http.HttpServletRequest;
 

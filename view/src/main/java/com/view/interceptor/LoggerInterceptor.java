@@ -2,7 +2,7 @@ package com.view.interceptor;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.common.tools.JSONTool;
+import com.view.tools.JSONTool;
 import com.view.tools.SpringFactoryTool;
 import com.view.entity.jpa.LoggerBo;
 import com.view.service.ILoggerService;
