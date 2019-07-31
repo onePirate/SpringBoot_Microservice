@@ -1,13 +1,12 @@
 package com.configmng;
 
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 /**
@@ -15,16 +14,13 @@ import org.springframework.stereotype.Service;
  * @createTime 2019-05-24 22:49
  * @description
  */
+@Slf4j
 @Service("config")
 public class ConfigCenter {
-    private static final Logger log = LoggerFactory.getLogger(ConfigCenter.class);
     public static final int STATUS_OK = 200;
     public static final int STATUS_NOT_FOUND = 404;
     @Value("127.0.0.1:8080")
     private String ip;
-
-    public ConfigCenter() {
-    }
 
     public String get(String key) {
         String hostIp = System.getProperty("hostIp");
